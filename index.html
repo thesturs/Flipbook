@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js demo-4">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<meta name="robots" content="noindex">
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!-- custom demo style -->
+<link rel="stylesheet" type="text/css" href="css/demo4.css" />
+
+<style>
+.container {
+}
+.bb-custom-wrapper {
+    height: 100%;
+    max-height: 94%;
+    max-width: 100%;
+    width: 100%;
+    padding-right: 1.2em;
+    padding-left: 1.2em;
+	padding-bottom: 1.2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+}
+.bb-item, .bb-page, .container, .bb-custom-side, .bb-content {
+    background-color: transparent;
+    backface-visibility: hidden;
+}
+.bb-custom-firstpage, .bb-custom-side {
+    background: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+}
+.bb-custom-firstpage {
+    background-position: right;
+    backface-visibility: hidden;
+}
+.bb-custom-side.odd {
+    background-position: left;
+    backface-visibility: hidden;
+}
+.bb-custom-side.even {
+    background-position: right;
+    backface-visibility: hidden;
+}
+	
+	
+	
+	
+
+	
+nav a {
+    background: rgba(0,0,0,0.50) !important;
+	opacity: 0.4;
+	color: white;
+}
+#bb-nav-prev {
+    bottom: 2em;
+    left: 4em;
+    position: absolute;
+}
+#bb-nav-next {
+	
+    bottom: 2em;
+    right: 4em;
+    position: absolute;
+}
+	nav:hover  a {
+		opacity: 1;
+	}
+	
+	#bb-nav-prev:before {
+		color:white;
+	}
+		#bb-nav-next:before {
+		color:white;
+	}
+	
+	.btn {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+ z-index: 10000;
+  font-size: 32px;
+  line-height: 32px;
+  padding: 10px 14px;
+  color: #ccc;
+  background: #666;
+  text-shadow: -1px -1px #333;
+}
+.btn:hover {
+  background: #4F4F4F;
+}
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(status.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
+	
+</style>
+<script src="js/modernizr.custom.js"></script>
+</head>
+<body style="background: #CECECE">
+	<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+	<div class="btn btn-info" id="fullscreen-button" alt="Fullscreen">
+  <i class="fa fa-expand"></i>
+</div>
+<div class="container">
+  <div class="bb-custom-wrapper">
+    <div id="bb-bookblock" class="bb-bookblock">
+      <div class="bb-item">
+        <div class="bb-custom-firstpage even" id="cover">
+          <div></div>
+        </div>
+        <div class="bb-custom-side odd" id="p1" style=" background-image: url('images/p1.jpg');"> </div>
+      </div>
+      <div class="bb-item">
+        <div class="bb-custom-side even" id="p2" style=" background-image: url('images/p2.jpg');"> </div>
+        <div class="bb-custom-side odd" id="p3" style=" background-image: url('images/p3.jpg');"> </div>
+      </div>
+      <div class="bb-item">
+        <div class="bb-custom-side even" id="p4" style=" background-image: url('images/p4.jpg');"> </div>
+        <div class="bb-custom-side odd" id="p5" style=" background-image: url('images/p5.jpg');"> </div>
+      </div>
+		  <div class="bb-item">
+        <div class="bb-custom-side even" id="p6" style=" background-image: url('images/p6.jpg');"> </div>
+        <div class="bb-custom-side odd" id="p7" style=" background-image: url('images/p7.jpg');"> </div>
+      </div>
+		  <div class="bb-item">
+        <div class="bb-custom-side even" id="p8" style=" background-image: url('images/p8.jpg');"> </div>
+        <div class="bb-custom-side odd" id="p9" style=" background-image: url('images/p9.jpg');"> </div>
+      </div>
+		  <div class="bb-item">
+        <div class="bb-custom-side even" id="p10" style=" background-image: url('images/p10.jpg');"> </div>
+        <div class="bb-custom-side odd" id="p11" style=" background-image: url('images/p11.jpg');"> </div>
+      </div>
+		  <div class="bb-item">
+        <div class="bb-custom-side even" id="p12" style=" background-image: url('images/p12.jpg');"> </div>
+        <div class="bb-custom-side odd" id="p13" style=" background-image: url('images/p13.jpg');"> </div>
+      </div>
+			  <div class="bb-item">
+        <div class="bb-custom-side even" id="p14" style=" background-image: url('images/p14.jpg');"> </div>
+        <div class="bb-custom-side odd" id="p15" style=" background-image: url('images/p15.jpg');"> </div>
+      </div>
+				  <div class="bb-item">
+        <div class="bb-custom-side even" id="p16" style=" background-image: url('images/p16.jpg');"> </div>
+        <div class="bb-custom-side odd" id="p17" style=" background-image: url('images/p17.jpg');"> </div>
+      </div>
+    </div>
+    
+  </div>
+	<nav> <a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left"></a> <a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right"></a> </nav>
+</div>
+<!-- /container --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+
+<script src="js/jquerypp.custom.js"></script> 
+<script src="js/jquery.bookblock.js"></script> 
+	<script src="js/jquery.fullscreen.js"></script> 
+	<script>
+	
+	$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').delay(860).fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(870).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(870).css({'overflow':'visible'});
+})
+	
+	</script>
+<script>
+			var Page = (function() {
+				
+				var config = {
+						$bookBlock : $( '#bb-bookblock' ),
+						$navNext : $( '#bb-nav-next,.odd' ),
+						$navPrev : $( '#bb-nav-prev,.even' ),
+						$navFirst : $( '#bb-nav-first' ),
+						$navLast : $( '#bb-nav-last' )
+					},
+					init = function() {
+						config.$bookBlock.bookblock( {
+							speed : 1000,
+							shadowSides : 0.01,
+							shadowFlip : 0.01,
+							shadows: true,
+						
+						} );
+						initEvents();
+					},
+					initEvents = function() {
+						
+						var $slides = config.$bookBlock.children();
+
+						// add navigation events
+						config.$navNext.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'next' );
+							return false;
+						} );
+
+						config.$navPrev.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'prev' );
+							return false;
+						} );
+
+						config.$navFirst.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'first' );
+							return false;
+						} );
+
+						config.$navLast.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'last' );
+							return false;
+						} );
+						
+						// add swipe events
+						$slides.on( {
+							'swipeleft' : function( event ) {
+								config.$bookBlock.bookblock( 'next' );
+								return false;
+							},
+							'swiperight' : function( event ) {
+								config.$bookBlock.bookblock( 'prev' );
+								return false;
+							}
+						} );
+
+						// add keyboard events
+						$( document ).keydown( function(e) {
+							var keyCode = e.keyCode || e.which,
+								arrow = {
+									left : 37,
+									up : 38,
+									right : 39,
+									down : 40
+								};
+
+							switch (keyCode) {
+								case arrow.left:
+									config.$bookBlock.bookblock( 'prev' );
+									break;
+								case arrow.right:
+									config.$bookBlock.bookblock( 'next' );
+									break;
+							}
+						} );
+					};
+
+					return { init : init };
+
+			})();
+		</script> 
+<script>
+				Page.init();
+
+		</script>
+	<!-- Preloader -->
+
+</body>
+</html>
